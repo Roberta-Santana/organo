@@ -6,8 +6,10 @@ import "./Formulario.css";
 
 const Formulario=(props)=>{
 
-const times = [ 'Programação', 'Front-End','Data Science', 'Devops', 
-    'UX e Desing', 'Mobile', 'Inovação e Gestão'];
+const [nome, setNome] = useState('');
+const [cargo, setCargo] = useState('');
+const [imagem, setImagem] = useState('');
+const [time, setTime] = useState('');
 
 const aoSalvar = (evento)=>{
     evento.preventDefault();
@@ -15,11 +17,6 @@ const aoSalvar = (evento)=>{
         nome, cargo, imagem, time
     })
 }
-
-const [nome, setNome] = useState('');
-const [cargo, setCargo] = useState('');
-const [imagem, setImagem] = useState('');
-const [time, setTime] = useState('');
 
     return(
         <section className="formulario">
@@ -46,7 +43,7 @@ const [time, setTime] = useState('');
             />
             <ListaSuspensa 
                 label='Time' 
-                itens = {times}
+                itens = {props.times}
                 valor={time}
                 aoAlterado={valor=>setTime(valor)}
             />
