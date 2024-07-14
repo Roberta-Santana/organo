@@ -4,14 +4,16 @@ import CampoTexto from "../CampoTexto";
 import ListaSuspensa from "../ListaSuspensa";
 import "./Formulario.css";
 
-const Formulario=()=>{
+const Formulario=(props)=>{
 
 const times = [ 'Programação', 'Front-End','Data Science', 'Devops', 
     'UX e Desing', 'Mobile', 'Inovação e Gestão'];
 
 const aoSalvar = (evento)=>{
     evento.preventDefault();
-    console.log('O Form foi submetido', nome, time  )
+    props.aoColaboradorCadastrado({
+        nome, cargo, imagem, time
+    })
 }
 
 const [nome, setNome] = useState('');
