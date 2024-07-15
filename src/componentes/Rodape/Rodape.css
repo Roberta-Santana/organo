@@ -1,0 +1,23 @@
+.rodape{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    background-color: #6278f7;
+    padding: 24px 0;    
+}
+
+.rodape .redes_sociais{
+    margin-left: 8rem;
+    display: flex;
+    align-items: center;
+    gap:20px;
+}
+
+.rodape .redes_sociais img{
+    max-height: 1rem;
+}
+
+.rodape .autoria{
+    margin-right: 2rem;
+}
