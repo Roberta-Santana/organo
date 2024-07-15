@@ -55,17 +55,14 @@ function App() {
       <Formulario times={times.map(time=>time.nome)} aoColaboradorCadastrado={colaborador=> aoNovoColaboradorAdicionado(colaborador)}/>
     
       {times.map(time => {
-                console.log('Renderizando time:', time.nome);
-                return (
-                    <Time 
-                        key={time.nome} 
-                        nome={time.nome} 
-                        corPrimaria={time.corPrimaria} 
-                        corSecundaria={time.corSecundaria}
-                        colaboradores={colaboradores.filter(colaborador => colaborador.time === time.nome)}
-                    />
-                );
-            })}
+        return(
+            <Time 
+              key={time.nome} 
+              nome={time.nome} 
+              corPrimaria={time.corPrimaria} 
+              corSecundaria={time.corSecundaria}
+              colaboradores={colaboradores.filter(colaborador => colaborador.time === time.nome)}
+        />)})}
     </div>
     
   );
