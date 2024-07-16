@@ -4,6 +4,10 @@
     background-color: #d9f7e9;
 }
 
+.time h1{
+    font-size: 40px;
+}
+
 .time h3{
     font-size: 32px;
     border-bottom: 4px solid #57c278;
